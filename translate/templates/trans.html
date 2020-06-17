@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <nav>
+            <ul>
+                <li class=”current”><a href=”#”>Home</a></li>
+                    <li><a href=”#”>Log</a></li>
+                </ul>
+        </nav>
+        <div class='main-content'>
+            <div class=double-button style="display: flex;
+            justify-content: center; align-items: center; margin-block-end: 5vh;margin-block-start: 5vh;">
+                <a href="#" class="btn-translation">
+                    <i class="fa fa-user-plus"></i> <span>翻訳する</span>
+                </a>
+                <div style="width: 2%">
+
+                </div>
+                <a href="#" class="btn-translation">
+                    <i class="fa fa-user-plus"></i> <span>翻訳結果をcopyする
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class='source_text' style="width: 100%;display: flex; justify-content: center;align-items:center">
+            <textarea placeholder="ここに翻訳元" type="textarea" rows="5" style="
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ">
+            </textarea>
+        </div>
+        <div style="text-align: center; margin:2vh">
+        <img src="img/down_arrow.png" height= "10vh" width="10vh">
+        </img>
+        </div>
+        <div class="box1">
+            <p>ここに翻訳結果</p>
+        </div>
+    </body>
+    <footer>
+        <ul class="footer-menu">
+            <li>home ｜</li>
+            <li>about ｜</li>
+        </ul>
+        <p>© All rights reserved by bc.</p>
+    </footer>
+</html>
+
+<style>
+nav ul{
+display: table;
+margin: 0 auto;
+padding: 0 ;
+width: 90%;
+text-align: center;
+}
+nav li{
+display: table-cell;
+min-width: 50px;
+}
+nav a{
+display: block;
+width: 100%;
+text-decoration: none;
+color:gray;
+padding-bottom: 5px;
+}
+nav li.current{
+border-bottom: 3px solid gray;
+}
+nav li:hover{
+color:gray;
+border-bottom: 3px solid gray;
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: white;
+    color:gray;
+    text-align: center;
+}
+ul.footer-menu li {
+display: inline;
+}
+.btn-translation {
+  text-decoration: none;
+  background-image: linear-gradient(#fff,#f5f8fa);
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  color: #393e42;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 14px;
+  position: relative;
+  width: 45%;
+ }
+
+.btn-translation i {
+  color: #1da1f3;
+}
+
+.btn-translation:hover {
+  background-color: #e6ecf0;
+  background-image: linear-gradient(#fff,#e6ecf0);
+  border-color: #e6ecf0;
+}
+.clear {
+
+  clear: both;
+  background-color: #fefe; /* 視覚化のための背景色 */
+
+}
+
+.left-column {
+
+  float: left;
+
+  width: 45%; /* 要素の幅を50%に定義 */
+  background-color: #aaa; /* 視覚化のための背景色 */
+
+}
+
+.right-column {
+
+  float: right;
+
+  width: 45%; /* 要素の幅を50%に定義 */
+
+  background-color: #ddd; /* 視覚化のための背景色 */
+}
+.box1 {
+    margin-left:auto;
+    margin-right:auto;
+    align-content: center;
+    justify-content: center;
+    width: 90%;
+    height: 40vh;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color:gray;
+    border: solid 1px #000000;
+    background :white;
+}
+.box1 p {
+    margin: 0;
+    padding: 0;
+}
+</style>
