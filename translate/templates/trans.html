@@ -7,9 +7,8 @@
                     <li><a href=”#”>Log</a></li>
                 </ul>
         </nav>
-        <div class='main-content'>
-            <div class=double-button style="display: flex;
-            justify-content: center; align-items: center; margin-block-end: 5vh;margin-block-start: 5vh;">
+        <div class="main-content">
+            <div class="double-button">
                 <a href="#" class="btn-translation">
                     <i class="fa fa-user-plus"></i> <span>翻訳する</span>
                 </a>
@@ -22,13 +21,8 @@
                 </a>
             </div>
         </div>
-        <div class='source_text' style="width: 100%;display: flex; justify-content: center;align-items:center">
-            <textarea placeholder="ここに翻訳元" type="textarea" rows="5" style="
-                width: 90%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                ">
+        <div class="source-text">
+            <textarea placeholder="ここに翻訳元" type="textarea" rows="5" class=textarea>
             </textarea>
         </div>
         <div style="text-align: center; margin:2vh">
@@ -110,28 +104,20 @@ display: inline;
   border-color: #e6ecf0;
 }
 .clear {
-
   clear: both;
-  background-color: #fefe; /* 視覚化のための背景色 */
-
+  background-color: #fefe;
 }
 
 .left-column {
-
   float: left;
-
-  width: 45%; /* 要素の幅を50%に定義 */
-  background-color: #aaa; /* 視覚化のための背景色 */
-
+  width: 45%;
+  background-color: #aaa;
 }
 
 .right-column {
-
   float: right;
-
-  width: 45%; /* 要素の幅を50%に定義 */
-
-  background-color: #ddd; /* 視覚化のための背景色 */
+  width: 45%;
+  background-color: #ddd;
 }
 .box1 {
     margin-left:auto;
@@ -149,5 +135,18 @@ display: inline;
 .box1 p {
     margin: 0;
     padding: 0;
+}
+.textarea{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.double-button{
+    display: flex;
+    justify-content: center; align-items: center; margin-block-end: 5vh;margin-block-start: 5vh;
+}
+.source-text{
+    width: 100%;display: flex; justify-content: center;align-items:center
 }
 </style>
