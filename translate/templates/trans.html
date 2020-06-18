@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html>
+    <head>
+    </head>
     <body>
         <nav>
             <ul>
-                <li class=”current”><a href=”#”>Home</a></li>
-                    <li><a href=”#”>Log</a></li>
-                </ul>
+                <li class=”current”><a href=/home>Home</a></li>
+                <!--
+                <li class=”current” style="cursor: pointer;">
+                    <input type="checkbox" class="checkbox"/>
+                     Log
+                </li>
+                -->
+            </ul>
+            <div class="hidden_show">
+                content
+            </div>
         </nav>
         <div class="main-content">
             <div class="double-button">
-                <a href="#" class="btn-translation">
-                    <i class="fa fa-user-plus"></i> <span>翻訳する</span>
+                <a href="javascript:translation();" class="btn-translation">
+                     <span>変換結果をDeepLで翻訳する</span>
                 </a>
                 <div style="width: 2%">
 
                 </div>
-                <a href="#" class="btn-translation">
-                    <i class="fa fa-user-plus"></i> <span>翻訳結果をcopyする
-                    </span>
+                <a href="javascript:copy()" class="btn-translation">
+                    <span>変換結果をcopyする</span>
                 </a>
             </div>
         </div>
-        <div class="source-text">
-            <textarea placeholder="ここに翻訳元" type="textarea" rows="5" class=textarea>
-            </textarea>
+        <div class="text-box">
+            <textarea placeholder="変換したいテキスト" rows="5" class="textarea" name="source" id="source" spellcheck=true></textarea>
         </div>
         <div style="text-align: center; margin:2vh">
         <img src="img/down_arrow.png" height= "10vh" width="10vh">
         </img>
         </div>
-        <div class="box1">
-            <p>ここに翻訳結果</p>
+        <div class="text-box">
+            <textarea placeholder="変換結果"rows="18" class="textarea" name="target" id="target"></textarea>
         </div>
+                    <script type="text/javascript" src='sample.js'></script>
     </body>
     <footer>
         <ul class="footer-menu">
-            <li>home ｜</li>
-            <li>about ｜</li>
+            <li><a href=/home>Home</a> </li>
+            <li>|</li>
+            <li><a href=about.html>About </a> </li>
         </ul>
+        <!--
         <p>© All rights reserved by bc.</p>
+        -->
     </footer>
 </html>
 
@@ -61,12 +73,28 @@ text-decoration: none;
 color:gray;
 padding-bottom: 5px;
 }
+nav .hidden_show{
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+nav input:checked ~ .hidden_show{
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
 nav li.current{
 border-bottom: 3px solid gray;
 }
 nav li:hover{
 color:gray;
 border-bottom: 3px solid gray;
+}
+
+nav input{
+    display: none;
 }
 
 footer{
@@ -119,23 +147,6 @@ display: inline;
   width: 45%;
   background-color: #ddd;
 }
-.box1 {
-    margin-left:auto;
-    margin-right:auto;
-    align-content: center;
-    justify-content: center;
-    width: 90%;
-    height: 40vh;
-    padding: 0.5em 1em;
-    font-weight: bold;
-    color:gray;
-    border: solid 1px #000000;
-    background :white;
-}
-.box1 p {
-    margin: 0;
-    padding: 0;
-}
 .textarea{
     width: 90%;
     display: flex;
@@ -146,7 +157,7 @@ display: inline;
     display: flex;
     justify-content: center; align-items: center; margin-block-end: 5vh;margin-block-start: 5vh;
 }
-.source-text{
+.text-box{
     width: 100%;display: flex; justify-content: center;align-items:center
 }
 </style>
