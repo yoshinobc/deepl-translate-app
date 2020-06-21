@@ -10,7 +10,6 @@ function copy() {
     var copy_text = document.getElementById("target");
     copy_text.select();
     document.execCommand("copy");
-    alert("コピーできました！ : " + copyTarget.value);
 };
 
 function conversion() {
